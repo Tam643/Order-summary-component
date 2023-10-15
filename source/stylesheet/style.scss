@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+@mixin fixed-center($width) {
+    $transform: calc($width/2);
+    transform: translateX(-$transform);
+    width: $width;
+}
+// The designs widths:
+$Mobile: 375px;
+$Desktop: 1440px;
+// ## Colors
+// ### Primary
+$Pale_blue: hsl(225, 100%, 94%);
+$Bright_blue: hsl(245, 75%, 52%);
+// ### Neutral
+$Very_pale_blue: hsl(225, 100%, 98%);
+$Desaturated_blue: hsl(224, 23%, 55%);
+$Dark_blue: hsl(223, 47%, 23%);
+// ## Typography
+$paragraph: 16px;
+
+html {
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 500;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background: $Pale_blue url('../../images/pattern-background-desktop.svg') bottom left no-repeat;
+    background-size: cover;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+    .card {
+        width: 300px;
+        background: #fff;
+        border-radius: 10px;
+        text-align: center;
+        overflow: hidden;
+
+        >img {
+            width: 100%;
+            height: auto;
+        }
+
+        .body {
+            padding: 15px;
+
+            .description {
+                h2 {
+                    margin: 0;
+                    font-weight: 900;
+                    color: $Dark_blue;
+                }
+
+                p {
+                    color: $Desaturated_blue;
+                    line-height: 1.5;
+                }
+            }
+
+            .plan {
+                background-color: $Very_pale_blue;
+                border-radius: 10px;
+                padding: 5px 15px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                p {
+                    color: $Desaturated_blue;
+                    .text-bold {
+                        font-weight: 900;
+                        color: $Dark_blue;
+                    }
+                }
+                a{
+                    font-weight: 700;
+                    color:$Bright_blue;
+                    &:hover{
+                        color:hsl(245, 75%, 75%);
+                        text-decoration: none;
+                    }
+                }
+            }
+            .btn-wrap{
+                display: grid;
+                gap: 10px;
+                margin-top: 15px;
+                button{
+                    font-weight: 900;
+                    cursor: pointer;
+                    padding: 10px 0;
+                }
+                button.primary{
+                    border-radius: 10px;
+                    border: 0px;
+                    background-color: $Bright_blue;
+                    color: $Pale_blue;
+                    box-shadow: 10px 10px 50px hsl(245, 75%, 85%);
+                    &:hover{
+                        background-color: hsl(245, 75%, 75%);
+                    }
+                }
+                button.button-link{
+                    color: $Desaturated_blue;
+                    background-color: inherit;
+                    border: none;
+                    &:hover{
+                        color: #000;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+.attribution {
+    font-size: 10px;
+    position: fixed;
+    text-align: center;
+    left: 50%;
+    bottom: 10px;
+    @include fixed-center(430px);
+}
+
+@media only screen and (max-width: $Mobile) {
+    body{
+        background-image: url('../../images/pattern-background-mobile.svg');
+    }
+}
