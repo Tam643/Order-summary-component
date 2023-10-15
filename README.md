@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Tam643/Order-summary-component)
-- Live Site URL: [Add live site URL here](https://main--boisterous-paletas-207f5e.netlify.app/)
+- Solution URL: [https://github.com/Tam643/Order-summary-component](https://github.com/Tam643/Order-summary-component)
+- Live Site URL: [https://main--boisterous-paletas-207f5e.netlify.app/](https://main--boisterous-paletas-207f5e.netlify.app/)
 
 ## My process
 
